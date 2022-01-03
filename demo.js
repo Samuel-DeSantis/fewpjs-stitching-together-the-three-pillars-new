@@ -26,8 +26,8 @@ function likeCallback(e) {
       // We'll use Pillar 1 (DOM Manipulation) to update the screen and
       // mimic Pillar 3 (Server Communication) to only update the screen if the
       // sending of information to the server succeeds.
-      // alert("You notified the server!");
-      // alert(serverMessage);
+      alert("You notified the server!");
+      alert(serverMessage);
       heart.innerText = glyphStates[heart.innerText];
       heart.style.color = colorStates[heart.style.color];
     })
@@ -60,6 +60,6 @@ function mimicServerCall() {
   return new Promise(function(resolve, reject) {
     setTimeout(function() {
       resolve("Pretend remote server notified of action!");
-    }, 300);
+    }, 100);
   });
 }
